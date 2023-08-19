@@ -10,7 +10,7 @@ const Weather = () => {
   const [data, setData] = useState({});
   const search = (evt) => {
     if (evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${input}&units=matric&appid=${api.key}`)
+      fetch(`${api.base}weather?q=${input}&units=metric&appid=${api.key}`)
         .then((res) => res.json())
         .then((result) =>{
 setData(result)
@@ -39,6 +39,7 @@ console.log(result);
       "Monday",
       "Tuesday",
       "Wednesday",
+      "Thursday",
       "Friday",
       "Saturday",
     ];
